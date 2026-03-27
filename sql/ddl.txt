@@ -1,0 +1,16 @@
+создание таблицы sales:
+
+CREATE TABLE public.sales (
+	"date" date NULL,
+	shop integer NULL,
+	cash integer NULL,
+	doc_id varchar NULL,
+	item varchar NULL,
+	category varchar NULL,
+	amount integer NULL,
+	price numeric NULL,
+	discount integer NULL
+);
+
+#создание ограничения, чтоб избежать повторного внесения данных
+ALTER TABLE public.sales ADD CONSTRAINT sales_pk PRIMARY KEY (doc_id,item);
